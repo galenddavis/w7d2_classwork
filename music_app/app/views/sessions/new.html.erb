@@ -1,0 +1,17 @@
+<h1>Make a new Kai</h1>
+
+
+<form action='<%= session_url %>' method='post'>
+    <%= auth_token %>
+        <label for='user_email'>Email</label>
+        <input id='user_email' type='text' name='user[email]'>
+
+        <label for='new_password'>Password</label>
+        <input id='new_password' type="password" name="user[password]">
+
+        <input type='submit' value='Kai'>
+        <%= render 'shared/errors' %>
+
+
+        
+</form>

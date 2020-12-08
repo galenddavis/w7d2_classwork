@@ -9,6 +9,25 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
+  <header>
+  <h1>Kai Repo</h1>
+  <% if logged_in? %>
+    <form action="<%= session_url %>" method="POST">
+      <input type="hidden" name="_method" value="delete">
+
+      <%= auth_token %>
+    <button id='button'>Log out</button>
+    <br>
+    </form>
+
+  <% else %>
+
+    <a href="<%= new_session_url %>">Logic</a>
+    <a href="<%= new_user_url %>">Signup</a>
+    <br>
+  <% end %>
+  </header>
+
   <body>
     <%= yield %>
   </body>
