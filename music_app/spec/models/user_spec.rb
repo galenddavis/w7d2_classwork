@@ -13,4 +13,4 @@ RSpec.describe User, type: :model do
       expect(User.password_digest)
     end
   end
-end
+end  
